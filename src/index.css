@@ -1,0 +1,27 @@
+@import "tailwindcss";
+@layer bsae{
+html{
+    @apply scroll-smooth;
+}
+body{
+    @apply bg-zinc-900 text-zinc-50 h-[200vh]
+}
+}
+/* ::-webkit-scrollbar {
+    display: none;
+} */
+@layer utilities {
+    .scroll-thin::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+  
+    .scroll-thin::-webkit-scrollbar-thumb {
+      background-color: rgba(0, 0, 0, 0.4);
+      border-radius: 10px;
+    }
+  
+    .scroll-thin::-webkit-scrollbar-track {
+      background-color: transparent;
+    }
+  }
