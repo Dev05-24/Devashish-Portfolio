@@ -6,7 +6,7 @@ const Skills = () => {
     { id: 4, title: "React", img: "./images/react.svg" },
     { id: 5, title: "NodeJS", img: "./images/nodejs.svg" },
     { id: 6, title: "Tailwind", img: "./images/tailwindcss.svg" },
-  ];
+];
   return (
     <>
       <div className="flex flex-col justify-center mb-20  ">
@@ -37,6 +37,3 @@ const Skills = () => {
   );
 };
 export default Skills;
-// bg-gray-500 p-2 rounded-lg border border-gray-200 flex items-center justify-center cursor-pointer overflow-hidden transition-transform transform hover:scale-105 hover:bg-gray-50
-//               hover:font-semibold
-//               shadow-[0px_0px_20px_rgba(255,255,255,0.5)]
