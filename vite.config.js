@@ -9,5 +9,5 @@ export default defineConfig({
     tailwindcss(),
     tailwindScrollbar,
   ],
-  base: "/Devashish-Portfolio",
+  base: "/Devashish-Portfolio/",
 })
