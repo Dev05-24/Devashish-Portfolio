@@ -16,7 +16,7 @@ const MainPage = () => {
             <p className="text-xl md:text-xl lg:text-2xl xl:text-3xl lg:text-left font-medium mb-5">A web developer </p> 
           </div>
           <div className="flex items-center mt-10 gap-10 justify-center md:justify-start animate-bounce">
-          <a href="www.linkedin.com/in/devashish-kunwar-533895177"><i className="fa-brands fa-linkedin text-3xl transition-transform transform hover:scale-130"></i></a>
+          <a href="https:://www.linkedin.com/in/devashish-kunwar-533895177"><i className="fa-brands fa-linkedin text-3xl transition-transform transform hover:scale-130"></i></a>
           <a href="https://github.com/Dev05-24"><i className="fa-brands fa-github text-3xl transition-transform transform hover:scale-130"></i></a>
           <a href="https://www.instagram.com/devashishkunwar/"><i className="fa-brands fa-instagram text-3xl transition-transform transform hover:scale-130"></i></a>
           </div>
