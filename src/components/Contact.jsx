@@ -24,12 +24,12 @@ function App() {
 
   return (
     // <div className="min-h-screen text-white overflow-hidden bg-gradient-to-b from-black via-zinc-900 to-black">
-      <div className="flex items-center justify-center relative p-6 ">
+      <div className="flex items-center justify-center relative p-6" id="contact">
       {/* Background decoration */}
       <div className="w-full max-w-lg relative">
 
-        <h1 className="text-5xl font-bold mb-8 text-center transform transition-all duration-500 hover:scale-105 bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-300 drop-shadow-lg">
-          Get in Touch
+        <h1 className="text-5xl font-bold my-8 text-center transform transition-all duration-500 hover:scale-105 bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-300 drop-shadow-lg">
+          GET IN TOUCH
         </h1>
 
         <form

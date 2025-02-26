@@ -9,8 +9,10 @@ const Skills = () => {
 ];
   return (
     <>
-      <div className="flex flex-col justify-center mb-20  ">
-        <h1 className="text-center text-7xl mt-20 mb-20 font-semibold">Skills</h1>
+      <div className="flex flex-col justify-center mb-20 py-15" id="skills">
+        <h1 className="text-5xl font-bold my-8 text-center transform transition-all duration-500 hover:scale-105 bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-300 drop-shadow-lg">
+          Skills
+        </h1>
         {/* <div className="skills-container flex items-center justify-center relative overflow-hidden mb-10 bg-blue-700"></div> */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-20 p-10">
             {cardsData.map((card) => (

@@ -9,6 +9,7 @@ import Navbar from "./components/Navbar";
 import Projects from "./components/Project";
 import Skills from "./components/Sklls";
 import Contact from "./components/Contact";
+import Certificates from "./components/Certificates";
 
 const App = () =>{
   return (
@@ -17,6 +18,7 @@ const App = () =>{
   <MainPage />
   <Skills />
   <Projects />
+  <Certificates />
   <Contact />
   </>
   )

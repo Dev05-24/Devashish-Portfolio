@@ -8,7 +8,7 @@ const MainPage = () => {
     },[]);
   return (
     <>
-      <div className="flex items-center justify-around m-auto h-screen">
+      <div className="flex items-center justify-around m-auto h-screen" id="home">
         <div className={`content sm:w-full lg:w-2/4 p-10 m-10 text-center sm:text-left transition-all ease-in-out duration-500 transform ${isVisisble ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"}`}>
           <div className="">
             <span className="text-3xl md:text-3xl lg:text-4xl xl:text-5xl lg:text-left font-medium inline-block mb-6">Hey, I'am </span> 

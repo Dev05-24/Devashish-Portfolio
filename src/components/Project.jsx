@@ -1,24 +1,13 @@
-import {
-  Code2,
-  Cpu,
-  Mail,
-  ExternalLink,
-  Menu,
-  X,
-} from "lucide-react";
+import { ExternalLink } from "lucide-react";
+import ProjectCard from "./ProjectCard";
+const projectsData = [
+  { id: 1,title: "Currency-Convertor",img: "./images/currency-convertor.png",link: "https://currency-convertor-ochre-nu.vercel.app/",},
+  { id: 2, title: "Weather-App", img: "./images/weather-app.png", link: "https://weather-app-rosy-eta-51.vercel.app/",},
+];
 const Projects = () => {
-  const ProjectsData = [
-    { id: 1, title: "Currency-Convertor", img: "./images/currency-convertor.png" ,link:"https://currency-convertor-ochre-nu.vercel.app/"},
-    { id: 2, title: "Weather-App", img: "./images/weather-app.png" ,link:"https://weather-app-rosy-eta-51.vercel.app/"},
-    { id: 3, title: "Project-3", img: "./images/project-3.jpg" },
-    { id: 4, title: "Project-4", img: "./images/project-4.jpg" },
-    { id: 5, title: "Project-5", img: "./images/project-5.jpg" },
-    { id: 6, title: "Project-6", img: "./images/project-6.jpg" },
-  ];
   return (
     <>
-      <h1 className="text-5xl text-center mt-10 font-bold transform transition-all ">Projects</h1>
-      <section id="projects" className="py-20 px-4 md:px-8 bg-secondary">
+      {/* <section id="projects" className="py-15 px-4 md:px-8 bg-secondary">
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-20">
             {ProjectsData.map((project) => (
@@ -52,6 +41,20 @@ const Projects = () => {
                   </div>
                 </div>
               </div>
+            ))}
+          </div>
+        </div>
+      </section> */}
+      <section className="py-15" id="projects">
+        <div className="container mx-auto px-4">
+          <div className="mb-16 text-center">
+            <h1 className="text-5xl font-bold my-8 text-center transform transition-all duration-500 hover:scale-105 bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-300 drop-shadow-lg">
+              Projects
+            </h1>
+          </div>
+          <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+            {projectsData.map((cert, index) => (
+              <ProjectCard key={index} {...cert}/>
             ))}
           </div>
         </div>
