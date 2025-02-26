@@ -1,6 +1,6 @@
 const Skills = () => {
   const cardsData = [
-    { id: 1, title: "Html", img: "./public/images/html.png" },
+    { id: 1, title: "Html", img: "./images/html.png" },
     { id: 2, title: "Css", img: "./public/images/css3.svg" },
     { id: 3, title: "JS", img: "./public/images/javascript.svg" },
     { id: 4, title: "React", img: "./public/images/react.svg" },
