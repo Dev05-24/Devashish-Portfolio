@@ -23,7 +23,7 @@ const MainPage = () => {
           </div>
         </div>
         <div className={`image lg:w-1/4 text-center justify-center hidden sm:block transition-all ease-in-out duration-500 transform ${isVisisble ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"}`}>
-          <img src="/images/main-image.jpg" alt="dev" className="rounded-full shadow-[0px_0px_40px_rgba(255,255,255,0.5)]" />
+          <img src="./images/main-image.jpg" alt="dev" className="rounded-full shadow-[0px_0px_40px_rgba(255,255,255,0.5)]" />
         </div>
       </div>
       <div className="w-full h-0.5 bg-white shadow-[0px_0px_10px_3px_rgba(255,255,255,0.7)]"></div>
