@@ -7,9 +7,6 @@ body{
     @apply bg-zinc-900 text-zinc-50 h-[200vh]
 }
 }
-/* ::-webkit-scrollbar {
-    display: none;
-} */
 @layer utilities {
     .scroll-thin::-webkit-scrollbar {
       width: 6px;
