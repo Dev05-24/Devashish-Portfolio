@@ -3,7 +3,7 @@ import ProjectCard from "./ProjectCard";
 const projectsData = [
   { id: 1,title: "Currency-Convertor",img: "./images/currency-convertor.png",link: "https://currency-convertor-ochre-nu.vercel.app/",},
   { id: 2, title: "Weather-App", img: "./images/weather-app.png", link: "https://weather-app-rosy-eta-51.vercel.app/",},
-  { id: 3, title: "Newsify", img: "./images/newsify", link: "https://newsify-eta.vercel.app/"},
+  { id: 3, title: "Newsify", img: "./images/newsify.png", link: "https://newsify-eta.vercel.app/"},
 ];
 const Projects = () => {
   return (
