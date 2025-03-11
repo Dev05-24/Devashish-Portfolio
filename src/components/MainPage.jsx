@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Download } from "lucide-react";
 
 const MainPage = () => {
     const[isVisisble, setIsVisible] = useState(false);
@@ -15,11 +16,12 @@ const MainPage = () => {
             <h1 className="text-gray-500 text-3xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-7xl lg:text-left font-bold mb-5">Devashish kunwar</h1>
             <p className="text-xl md:text-xl lg:text-2xl xl:text-3xl lg:text-left font-medium mb-5">A web developer </p> 
           </div>
-          <div className="flex items-center mt-10 gap-10 justify-center md:justify-start animate-bounce">
+          <div className="flex items-center mt-10 gap-10 justify-center md:justify-start">
 
           <a href="https://www.linkedin.com/in/devashish-kunwar-533895177"><i className="fa-brands fa-linkedin text-3xl transition-transform transform hover:scale-130"></i></a>
           <a href="https://github.com/Dev05-24"><i className="fa-brands fa-github text-3xl transition-transform transform hover:scale-130"></i></a>
           <a href="https://www.instagram.com/devashishkunwar/"><i className="fa-brands fa-instagram text-3xl transition-transform transform hover:scale-130"></i></a>
+          <a href="/resume.pdf" download="resume.pdf"><button className="bg-white px-3 py-2 text-black rounded-lg font-bold cursor-pointer transition-transform transform duration-300 hover:scale-110">Resume</button></a>
           </div>
         </div>
         <div className={`image lg:w-1/4 text-center justify-center hidden sm:block transition-all ease-in-out duration-500 transform ${isVisisble ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"}`}>

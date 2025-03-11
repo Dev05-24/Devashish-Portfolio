@@ -8,7 +8,7 @@ const ProjectCard = ({ id, title, img, link }) => {
         <img
           src={img}
           alt={title}
-          className="h-full w-full scale-100 object-cover transition-all duration-700 ease-out group-hover:scale-110"
+          className="h-full scale-100 object-contain transition-all duration-700 ease-out group-hover:scale-110"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/50 opacity-50 mix-blend-overlay transition-opacity duration-700 group-hover:opacity-0" />
       </div>

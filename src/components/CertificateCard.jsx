@@ -3,7 +3,8 @@ import { ExternalLink } from "lucide-react";
 
 const CertificateCard = ({ title, issuer, date, image, link }) => {
   return (
-    <div className="group relative overflow-hidden rounded-xl bg-zinc-900 shadow-lg transition-all duration-700 hover:-translate-y-2 hover:shadow-2xl hover:shadow-white/10">
+    <div className="group relative overflow-hidden rounded-xl bg-zinc-900 shadow-lg transition-all duration-700 hover:-translate-y-2
+    hover:shadow-2xl hover:shadow-white/10">
       <div className="aspect-video w-full overflow-hidden">
         <img
           src={image}
