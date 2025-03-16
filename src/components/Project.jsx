@@ -4,6 +4,7 @@ const projectsData = [
   { id: 2, title: "Weather-App", img: "./images/weather-app.png", link: "https://weather-app-rosy-eta-51.vercel.app/",},
   { id: 3, title: "Newsify", img: "./images/newsify.png", link: "https://newsify-eta.vercel.app/",},
   { id: 4, title: "TaskManager", img: "./images/TaskManager.png", link: "https://task-managing-cyan.vercel.app/",},
+  { id: 5, title: "Text-Translator", img: "./images/text-translator.png", link: "https://text-translator-kappa-three.vercel.app/",},
 ];
 const Projects = () => {
   return (
