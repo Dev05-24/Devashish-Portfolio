@@ -1,11 +1,11 @@
 const Skills = () => {
   const cardsData = [
-    { id: 1, title: "Html", img: "./images/html.png" },
-    { id: 2, title: "Css", img: "./images/css3.svg" },
-    { id: 3, title: "JS", img: "./images/javascript.svg" },
-    { id: 4, title: "React", img: "./images/react.svg" },
-    { id: 5, title: "NodeJS", img: "./images/nodejs.svg" },
-    { id: 6, title: "Tailwind", img: "./images/tailwindcss.svg" },
+    { id: 1, title: "Html", img: "./images/skills/html.png" },
+    { id: 2, title: "Css", img: "./images/skills/css3.svg" },
+    { id: 3, title: "JS", img: "./images/skills/javascript.svg" },
+    { id: 4, title: "React", img: "./images/skills/react.svg" },
+    { id: 5, title: "NodeJS", img: "./images/skills/nodejs.svg" },
+    { id: 6, title: "Tailwind", img: "./images/skills/tailwindcss.svg" },
 ];
   return (
     <>

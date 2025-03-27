@@ -1,11 +1,19 @@
 import CertificateCard from "./CertificateCard";
 const certificates = [
   {
+    title: "TailwindCSS",
+    issuer: "Udemy",
+    date: "March 2025",
+    image:
+      "./images/certificates/tailwind.jpg",
+    link: "https://www.udemy.com/certificate/UC-20c176fe-0ea3-4f70-927b-49e80b83eec4/",
+  },
+  {
     title: "Web Development",
     issuer: "Udemy",
     date: "Jan 2025",
     image:
-      "./images/web-development.jpg",
+      "./images/certificates/web-development.jpg",
     link: "https://www.udemy.com/certificate/UC-e0ea110a-b24b-4cfc-9c6b-f76590b15462/",
   },
   {
@@ -13,7 +21,7 @@ const certificates = [
     issuer: "Udemy",
     date: "Nov 2022",
     image:
-      "./images/React_JS.jpg",
+      "./images/certificates/React_JS.jpg",
     link: "https://www.udemy.com/certificate/UC-b4941001-078c-469e-9139-a37fdc89675d/",
   },
 ];
