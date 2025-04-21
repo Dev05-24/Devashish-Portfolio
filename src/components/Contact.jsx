@@ -12,6 +12,7 @@ function App() {
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsSubmitted(true);
+    setFormState({name:"", email:"", message:""})
     setTimeout(() => setIsSubmitted(false), 3000);
   };
 
