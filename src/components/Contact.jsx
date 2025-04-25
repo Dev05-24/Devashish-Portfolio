@@ -1,5 +1,7 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { Send, CheckCircle } from "lucide-react";
+import toast, { Toaster } from "react-hot-toast";
+import emailjs from "emailjs-com";
 
 function App() {
   const [formState, setFormState] = useState({
@@ -8,12 +10,25 @@ function App() {
     message: "",
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const formref = useRef();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setIsSubmitted(true);
-    setFormState({name:"", email:"", message:""})
-    setTimeout(() => setIsSubmitted(false), 3000);
+
+    emailjs.sendForm(
+      "service_zcn6elj",
+      "template_tnsh68b",
+      formref.current,
+      "44o9e7JfPfHXdO8rX"
+    ).then(()=>{
+      toast.success("Message sent successfully");
+      setIsSubmitted(true);
+      setFormState({name:"", email:"", message:""})
+      setTimeout(() => setIsSubmitted(false), 3000);
+    })
+    .catch(()=>{
+      toast.error("Failed to send message. Try again");
+    });
   };
 
   const handleChange = (e) => {
@@ -25,6 +40,7 @@ function App() {
 
   return (
       <div className="flex items-center justify-center relative p-6" id="contact">
+        <Toaster position="top-right"/>
       <div className="w-full max-w-lg relative">
 
         <h1 className="text-5xl font-bold my-8 text-center transform transition-all duration-500 hover:scale-105 bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-300 drop-shadow-lg">
@@ -32,6 +48,7 @@ function App() {
         </h1>
 
         <form
+        ref={formref}
           onSubmit={handleSubmit}
           className="space-y-6 bg-zinc-900/50 backdrop-blur-sm p-8 rounded-lg shadow-[0_0_15px_rgba(255,255,255,0.07)] transform transition-all duration-500 hover:shadow-[0_0_25px_rgba(255,255,255,0.1)] border border-white/10"
         >

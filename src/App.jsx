@@ -10,10 +10,12 @@ import Projects from "./components/Project";
 import Skills from "./components/Sklls";
 import Contact from "./components/Contact";
 import Certificates from "./components/Certificates";
+import { Toaster } from "react-hot-toast";
 
 const App = () =>{
   return (
     <>
+    <Toaster position="top-right"/>
     <Navbar />
   <MainPage />
   <Skills />
