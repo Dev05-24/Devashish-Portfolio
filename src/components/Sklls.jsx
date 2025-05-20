@@ -6,8 +6,9 @@ const Skills = () => {
     { id: 4, title: "React", img: "./images/skills/react.svg" },
     { id: 5, title: "NodeJS", img: "./images/skills/nodejs.svg" },
     { id: 6, title: "Tailwind", img: "./images/skills/tailwindcss.svg" },
-    { id: 7, title: "Bootstrap", img: "./images/skills/bootstrap.png" },
-    { id: 8, title: "Github", img: "./images/skills/github.png" },
+    { id: 7, title: "Express", img: "./images/skills/express.png" },
+    { id: 8, title: "MongoDB", img: "./images/skills/mongodb.png" },
+    { id: 9, title: "Github", img: "./images/skills/github.png" },
 ];
   return (
     <>
