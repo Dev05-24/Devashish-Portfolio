@@ -2,7 +2,7 @@ import ProjectCard from "./ProjectCard";
 const projectsData = [
   { id: 1,title: "Currency-Convertor",img: "./images/projects/currency-convertor.png",link: "https://currency-convertor-ochre-nu.vercel.app/",},
   { id: 2, title: "Weather-App", img: "./images/projects/weather-app.png", link: "https://weather-app-rosy-eta-51.vercel.app/",},
-  { id: 3, title: "Newsify", img: "./images/projects/newsify.png", link: "https://newsify-eta.vercel.app/",},
+  { id: 3, title: "Newsify", img: "./images/projects/newsify.png", link: "https://github.com/Dev05-24/Newsify",},
   { id: 4, title: "MyZone", img: "./images/projects/amazon-clone.png", link: "https://my-zone.vercel.app/",},
   { id: 5, title: "Text-Translator", img: "./images/projects/text-translator.png", link: "https://text-translator-kappa-three.vercel.app/",},
   { id: 6, title: "NoteApp", img: "./images/projects/note-app.png", link: "https://note-app-woad-gamma.vercel.app/",},

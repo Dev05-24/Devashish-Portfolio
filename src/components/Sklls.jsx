@@ -8,7 +8,8 @@ const Skills = () => {
     { id: 6, title: "Tailwind", img: "./images/skills/tailwindcss.svg" },
     { id: 7, title: "Express", img: "./images/skills/express.png" },
     { id: 8, title: "MongoDB", img: "./images/skills/mongodb.png" },
-    { id: 9, title: "Github", img: "./images/skills/github.png" },
+    { id: 9, title: "Redux", img: "./images/skills/redux.webp" },
+    { id: 10, title: "Github", img: "./images/skills/github.png" },
 ];
   return (
     <>
