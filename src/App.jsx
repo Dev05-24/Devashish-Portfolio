@@ -11,17 +11,21 @@ import Skills from "./components/Sklls";
 import Contact from "./components/Contact";
 import Certificates from "./components/Certificates";
 import { Toaster } from "react-hot-toast";
+import About from "./components/About";
 
 const App = () =>{
   return (
     <>
+    <div className="min-h-screen w-full">
     <Toaster position="top-right"/>
     <Navbar />
   <MainPage />
+  <About />
   <Skills />
   <Projects />
   <Certificates />
   <Contact />
+  </div>
   </>
   )
 }

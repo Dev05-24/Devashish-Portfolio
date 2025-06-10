@@ -4,7 +4,25 @@ html{
     @apply scroll-smooth;
 }
 body{
-    @apply bg-zinc-900 text-zinc-50 h-[200vh]
+    /* @apply bg-zinc-900 text-zinc-50 h-[200vh] */
+    /* background: linear-gradient(to right, #2c0034, #000000); */
+    /* background: linear-gradient(to right, #2c0034, #000000); */
+    /* background: linear-gradient(to right, #2b1055, #7597de); */
+    /* background: linear-gradient(to right, #8f00ff, #1a001f); */
+/* background: linear-gradient(to bottom right, #4b0082, #000000); */
+/* background: linear-gradient(to right, #0f0c29, #302b63); */
+    /* background: linear-gradient(to right, #301934, #1c1c1c); */
+    /* background: linear-gradient(to right, #1a1a2e, #16213e); */
+    /* background: linear-gradient(to right, #0f2027, #203a43, #2c5364); */
+    /* background: linear-gradient(to right, #4b006e, #000000); */
+    /* background: linear-gradient(to right, #2b2e4a, #1e1f26); */
+    /* background: linear-gradient(to right, #232526, #414345); */
+    /* background: linear-gradient(to right, #1e3c72, #2a5298); */
+    /* background: linear-gradient(to right, #3a0ca3, #240046); */
+    /* background: linear-gradient(to right, #434343, #000000); */
+    /* background: linear-gradient(to right, #1f0036, #2b0039, #000000); */
+    background: black;
+    color : orange;
 }
 }
 @layer utilities {
@@ -14,11 +32,11 @@ body{
     }
   
     .scroll-thin::-webkit-scrollbar-thumb {
-      background-color: rgba(0, 0, 0, 0.4);
+      /* background-color: rgba(0, 0, 0, 0.4); */
       border-radius: 10px;
     }
   
     .scroll-thin::-webkit-scrollbar-track {
-      background-color: transparent;
+      /* background-color: transparent; */
     }
   }

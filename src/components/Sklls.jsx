@@ -9,36 +9,64 @@ const Skills = () => {
     { id: 7, title: "Express", img: "./images/skills/express.png" },
     { id: 8, title: "MongoDB", img: "./images/skills/mongodb.png" },
     { id: 9, title: "Redux", img: "./images/skills/redux.webp" },
-    { id: 10, title: "Github", img: "./images/skills/github.png" },
-];
+    { id: 10, title: "Git", img: "./images/skills/git.png" },
+    { id: 11, title: "Github", img: "./images/skills/github.png" },
+  ];
   return (
     <>
-      <div className="flex flex-col justify-center mb-20 py-15" id="skills">
-        <h1 className="text-5xl font-bold my-8 text-center transform transition-all duration-500 hover:scale-105 bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-300 drop-shadow-lg">
+      <div
+        className="flex flex-col justify-center py-20 relative overflow-hidden mx-10"
+        id="skills"
+      >
+        <div className="relative overflow-hidden px-10">
+          <h1 className="text-4xl lg:text-5xl text-orange-400 font-extrabold my-8 text-center transform transition-all duration-500 hover:scale-105">
           Skills
         </h1>
-        {/* <div className="skills-container flex items-center justify-center relative overflow-hidden mb-10 bg-blue-700"></div> */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-20 p-10">
-            {cardsData.map((card) => (
-              <div
-                className="p-2 rounded-lg flex items-center justify-center cursor-pointer overflow-hidden hover:scale-105 hover:bg-gray-50 shadow-[0px_0px_15px_rgba(255,255,255,0.7)] hover:text-black font-bold
+        <div
+            className="
+    absolute rounded-full bg-orange-400
+    h-64 w-48 
+    -top-10 -left-45
+    md:h-72 md:w-[22rem] md:-top-40 md:-left-70
+    lg:h-[15rem] lg:w-[32rem] lg:-top-40 lg:-left-120
+    xl:h-[19rem] xl:w-[34rem] xl:-top-30 xl:-left-100
+    backdrop-blur-3xl
+  "
+            style={{ filter: "blur(200px)" }}
+          ></div>
+          <div
+            className="
+    absolute rounded-full bg-orange-400
+    h-40 w-48 
+    -top-30 -right-40
+    md:h-72 md:w-[22rem] md:-top-40 md:-right-70
+    lg:h-[15rem] lg:w-[32rem] lg:-top-40 lg:-right-120
+    xl:h-[19rem] xl:w-[34rem] xl:-top-70 xl:-right-90
+    backdrop-blur-3xl
+  "
+            style={{ filter: "blur(200px)" }}
+          ></div>
+        
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-20 p-10 relative overflow-hidden">
+          
+          {cardsData.map((card) => (
+            <div
+              className="p-2 rounded-lg flex items-center justify-center cursor-pointer overflow-hidden hover:scale-105 hover:bg-gray-50 shadow-[0px_0px_15px_rgba(255,255,255,0.7)] hover:text-black font-bold
               bg-zinc-900/50 backdrop-blur-sm  transform transition-all duration-500 hover:shadow-[0_0_25px_rgba(255,255,255,0.1)] border border-white/10"
-              >
-                <img
-                  className="h-12 object-cover"
-                  src={card.img}
-                  alt={card.title}
-                />
-                <div className="p-5">
-                  <h2 className="text-xl">
-                    {card.title}
-                  </h2>
-                </div>
+            >
+              <img
+                className="h-12 object-cover"
+                src={card.img}
+                alt={card.title}
+              />
+              <div className="p-5">
+                <h2 className="text-xl">{card.title}</h2>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
+        </div>
+        </div>
       </div>
-      <div className="w-full h-0.5 bg-white shadow-[0px_0px_10px_3px_rgba(255,255,255,0.7)]"></div>
     </>
   );
 };

@@ -39,15 +39,50 @@ function App() {
   };
 
   return (
-      <div className="flex items-center justify-center relative p-6" id="contact">
+      <div className="flex items-center sm:items-start relative py-20 min-h-screen mx-10 " id="contact">
         <Toaster position="top-right"/>
-      <div className="w-full max-w-lg relative">
-
-        <h1 className="text-5xl font-bold my-8 text-center transform transition-all duration-500 hover:scale-105 bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-300 drop-shadow-lg">
+      <div className="relative text-center overflow-hidden w-full">
+        <div>
+          <h1 className="text-xl lg:text-3xl font-semibold my-5 transform transition-all duration-500 hover:scale-105 bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-300 drop-shadow-lg">
           GET IN TOUCH
-        </h1>
+          </h1>
+          <div className="absolute rounded-full bg-orange-400 h-64 w-48 -top-10 -left-45 md:h-72 md:w-[22rem] md:-top-40 md:-left-70
+                  lg:h-[15rem] lg:w-[32rem] lg:-top-40 lg:-left-120 xl:h-[19rem] xl:w-[34rem] xl:-top-30 xl:-left-100 backdrop-blur-3xl"
+            style={{ filter: "blur(200px)" }}
+          ></div>
+          <div
+        className="absolute rounded-full bg-orange-400 h-40 w-48 -top-30 -right-40 md:h-72 md:w-[22rem] md:-top-40 md:-right-70 lg:h-[15rem] lg:w-[32rem] lg:-top-40 lg:-right-120 xl:h-[19rem] xl:w-[34rem] xl:-top-70 xl:-right-90 backdrop-blur-3xl"
+        style={{ filter: "blur(200px)" }}
+          ></div>
+          <h1 className="text-4xl lg:text-7xl text-orange-400 font-extrabold mb-10 transform transition-all duration-500 hover:scale-105 bg-clip-text bg-gradient-to-r from-white to-gray-300 drop-shadow-lg">Reach Out</h1>
+          <div className="">
+            <p className="text-sm lg:text-xl lg:w-xl mx-auto text-white">Whether you're passionate about crafting seamless user experiences, building intelligent web applications, or exploring the intersection of AI and frontend development, I’m always open to connecting. Let’s collaborate to create impactful solutions and push the boundaries of innovation through clean code, smart design, and emerging technologies.</p>
+          </div>
+          <button className="px-6 py-4 border-white rounded-3xl mt-10 font-extrabold bg-orange-400 text-white cursor-pointer hover:scale-110 ease-in-out duration-300 text-sm lg:text-lg">Contact Me</button>
 
-        <form
+        <div className="flex items-center mt-10 gap-10 justify-center">
+            <a
+              href="https://www.linkedin.com/in/devashish-kunwar-533895177"
+              target="_blank"
+            >
+              <i className="fa-brands animate-bounce fa-linkedin text-3xl transition-transform transform hover:scale-110 text-blue-500"></i>
+            </a>
+            <a href="https://github.com/Dev05-24" target="_blank">
+              <i className="fa-brands text-blue-50 fa-github text-3xl animate-bounce transition-transform transform hover:scale-110"></i>
+            </a>
+            <a href="https://leetcode.com/u/DEV0902/" target="_blank">
+              <i className="fa-brands fa-code text-3xl animate-bounce transition-transform transform hover:scale-110"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      </div>     
+  );
+}
+
+export default App;
+
+{/* <form
         ref={formref}
           onSubmit={handleSubmit}
           className="space-y-6 bg-zinc-900/50 backdrop-blur-sm p-8 rounded-lg shadow-[0_0_15px_rgba(255,255,255,0.07)] transform transition-all duration-500 hover:shadow-[0_0_25px_rgba(255,255,255,0.1)] border border-white/10"
@@ -126,12 +161,4 @@ function App() {
               </>
             )}
           </button>
-        </form>
-
-    
-      </div>
-      </div>     
-  );
-}
-
-export default App;
+        </form> */}
