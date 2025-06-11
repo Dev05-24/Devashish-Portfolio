@@ -26,7 +26,7 @@ const About = () => {
             </li>
             <li>
               <a href="" className="tracking-wider">
-                2019-2023
+                20<span className="text-orange-400">19</span>-20<span className="text-orange-400">23</span>
               </a>
             </li>
           </ul>
@@ -40,19 +40,19 @@ const About = () => {
           </span>
           , a passionate and creative Frontend Developer with a strong
           foundation in modern web technologies. I specialize in building
-          responsive and engaging websites using HTML, CSS, JavaScript,
-          React.js.
+          responsive and engaging websites using <span className="text-orange-400"> HTML, CSS, JavaScript,
+          React.js.</span>
         </p>
 
         <p>
-          With hands-on experience in frameworks like Tailwind CSS and
-          Bootstrap, as well as backend basics with Node.js and APIs, I strive
+          With hands-on experience in frameworks like <span className="text-orange-400"> Tailwind CSS</span> and
+          <span className="text-orange-400">Bootstrap,</span> as well as backend basics with <span className="text-orange-400">Node.js</span> and <span className="text-orange-400">APIs,</span> I strive
           to deliver visually appealing, functional, and user-focused digital
           experiences.
         </p>
 
         <p>
-          Currently diving deeper into the MERN stack, I am building full-stack
+          Currently diving deeper into the <span className="text-orange-400">MERN stack,</span> I am building full-stack
           projects that combine clean UI design with robust backend systems —
           aiming to create impactful solutions that blend performance with
           creativity.

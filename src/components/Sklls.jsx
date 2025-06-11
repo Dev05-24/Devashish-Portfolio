@@ -22,45 +22,32 @@ const Skills = () => {
           <h1 className="text-4xl lg:text-5xl text-orange-400 font-extrabold my-8 text-center transform transition-all duration-500 hover:scale-105">
           Skills
         </h1>
-        <div
-            className="
-    absolute rounded-full bg-orange-400
-    h-64 w-48 
-    -top-10 -left-45
-    md:h-72 md:w-[22rem] md:-top-40 md:-left-70
-    lg:h-[15rem] lg:w-[32rem] lg:-top-40 lg:-left-120
-    xl:h-[19rem] xl:w-[34rem] xl:-top-30 xl:-left-100
-    backdrop-blur-3xl
-  "
+            <div
+              className="absolute rounded-full bg-orange-400 h-64 w-48 -top-10 -left-45 md:h-72 md:w-[22rem] md:-top-40 md:-left-70 lg:h-[15rem] lg:w-[32rem] lg:-top-40 lg:-left-120
+                      xl:h-[19rem] xl:w-[34rem] xl:-top-30 xl:-left-100 backdrop-blur-3xl"
             style={{ filter: "blur(200px)" }}
           ></div>
           <div
-            className="
-    absolute rounded-full bg-orange-400
-    h-40 w-48 
-    -top-30 -right-40
-    md:h-72 md:w-[22rem] md:-top-40 md:-right-70
-    lg:h-[15rem] lg:w-[32rem] lg:-top-40 lg:-right-120
-    xl:h-[19rem] xl:w-[34rem] xl:-top-70 xl:-right-90
-    backdrop-blur-3xl
-  "
+            className="absolute rounded-full bg-orange-400 h-40 w-48 -top-30 -right-40 md:h-72 md:w-[22rem] md:-top-40 md:-right-70 lg:h-[15rem] lg:w-[32rem] lg:-top-40 lg:-right-120
+                      xl:h-[19rem] xl:w-[34rem] xl:-top-70 xl:-right-90 backdrop-blur-3xl"
             style={{ filter: "blur(200px)" }}
           ></div>
         
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-20 p-10 relative overflow-hidden">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 p-3 gap-10 relative overflow-hidden bg-red-40 place-items-center place-content-center">
           
           {cardsData.map((card) => (
             <div
-              className="p-2 rounded-lg flex items-center justify-center cursor-pointer overflow-hidden hover:scale-105 hover:bg-gray-50 shadow-[0px_0px_15px_rgba(255,255,255,0.7)] hover:text-black font-bold
-              bg-zinc-900/50 backdrop-blur-sm  transform transition-all duration-500 hover:shadow-[0_0_25px_rgba(255,255,255,0.1)] border border-white/10"
+              // className="rounded-lg flex cursor-pointer bg-green-300 overflow-hidden hover:scale-105 hover:bg-gray-50 shadow-[0px_0px_15px_rgba(255,255,255,0.7)] hover:text-black font-bold
+              //  backdrop-blur-sm transform transition-all duration-500 hover:shadow-[0_0_25px_rgba(255,255,255,0.1)] border border-white/10"
+              className=" flex lg:flex-col px-3 py-3 items-center rounded-xl w-full justify-center gap-3"
             >
               <img
-                className="h-12 object-cover"
+                className="h-12 object-cover hover:scale-125 duration-300 ease-in-out hover:animate-bounce cursor-pointer"
                 src={card.img}
                 alt={card.title}
               />
-              <div className="p-5">
-                <h2 className="text-xl">{card.title}</h2>
+              <div className="">
+                <h2 className="text-xl font-bold">{card.title}</h2>
               </div>
             </div>
           ))}
