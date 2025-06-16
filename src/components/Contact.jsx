@@ -43,22 +43,22 @@ function App() {
         <Toaster position="top-right"/>
       <div className="relative text-center overflow-hidden w-full">
         <div>
-          <h1 className="text-xl lg:text-3xl font-semibold my-5 transform transition-all duration-500 hover:scale-105 bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-300 drop-shadow-lg">
+          <h1 className="text-xl lg:text-3xl font-semibold my-5 bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-300 drop-shadow-lg">
           GET IN TOUCH
           </h1>
           <div className="absolute rounded-full bg-orange-400 h-64 w-48 -top-10 -left-45 md:h-72 md:w-[22rem] md:-top-40 md:-left-70
-                  lg:h-[15rem] lg:w-[32rem] lg:-top-40 lg:-left-120 xl:h-[19rem] xl:w-[34rem] xl:-top-30 xl:-left-100 backdrop-blur-3xl"
+                  lg:h-[15rem] lg:w-[32rem] lg:-top-40 lg:-left-120 xl:h-[19rem] xl:w-[34rem] xl:-top-30 xl:-left-100 backdrop-blur-3xl animate-pulse"
             style={{ filter: "blur(200px)" }}
           ></div>
           <div
-        className="absolute rounded-full bg-orange-400 h-40 w-48 -top-30 -right-40 md:h-72 md:w-[22rem] md:-top-40 md:-right-70 lg:h-[15rem] lg:w-[32rem] lg:-top-40 lg:-right-120 xl:h-[19rem] xl:w-[34rem] xl:-top-70 xl:-right-90 backdrop-blur-3xl"
+        className="absolute rounded-full bg-orange-400 h-64 w-48 -top-30 -right-40 md:h-72 md:w-[22rem] md:-top-40 md:-right-70 lg:h-[15rem] lg:w-[32rem] lg:-top-40 lg:-right-120 xl:h-[19rem] xl:w-[34rem] xl:-top-70 xl:-right-90 backdrop-blur-3xl animate-pulse"
         style={{ filter: "blur(200px)" }}
           ></div>
-          <h1 className="text-4xl lg:text-7xl text-orange-400 font-extrabold mb-10 transform transition-all duration-500 hover:scale-105 bg-clip-text bg-gradient-to-r from-white to-gray-300 drop-shadow-lg">Reach Out</h1>
+          <h1 className="text-4xl lg:text-7xl text-orange-400 font-extrabold mt-10 transform transition-all duration-500 hover:scale-110 bg-clip-text bg-gradient-to-r from-white to-gray-300 drop-shadow-lg animate-bounce">Reach Out</h1>
           <div className="">
             <p className="text-sm lg:text-xl lg:w-xl mx-auto text-white">Whether you're passionate about crafting seamless user experiences, building intelligent web applications, or exploring the intersection of AI and frontend development, I’m always open to connecting. Let’s collaborate to create impactful solutions and push the boundaries of innovation through clean code, smart design, and emerging technologies.</p>
           </div>
-          <button className="px-6 py-4 border-white rounded-3xl mt-10 font-extrabold bg-orange-400 text-white cursor-pointer hover:scale-110 ease-in-out duration-300 text-sm lg:text-lg">Contact Me</button>
+          <button className="px-6 py-4 rounded-3xl mt-10 font-extrabold border-2 border-orange-400 text-white cursor-pointer hover:bg-orange-400 transform transition hover:scale-110 ease-in-out duration-300 text-sm lg:text-lg">Contact Me</button>
 
         <div className="flex items-center mt-10 gap-10 justify-center">
             <a

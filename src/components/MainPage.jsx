@@ -1,8 +1,14 @@
 import { useEffect, useState } from "react";
+import useTypewriter from "../hooks/useTypeWriter";
 // import { Download } from "lucide-react";
 
 const MainPage = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const text = useTypewriter([
+     "I'm Devashish Kunwar.",
+    "A Frontend Developer.",
+    "A MERN Stack Enthusiast.",
+  ]);
 
   useEffect(() => {
     setIsVisible(true);
@@ -15,13 +21,13 @@ const MainPage = () => {
       >
         <div
           className="bg-orange-400 absolute rounded-full h-56 w-72 sm:w-96 md:w-120
-          lg:w-120 xl:w-120 top-0 left-0 sm:-top-10 sm:-left-10 md:-top-20 md:-left-20 lg:-top-30 lg:-left-30  backdrop-blur-3xl"
+          lg:w-120 xl:w-120 top-0 left-0 sm:-top-10 sm:-left-10 md:-top-20 md:-left-20 lg:-top-30 lg:-left-30  backdrop-blur-3xl animate-pulse"
           style={{ filter: "blur(150px)" }}
         ></div>
         <div
           className="bg-orange-400 absolute rounded-full backdrop-blur-3xl
              h-0 w-0 sm:h-52 sm:w-44 sm:bottom-50 sm:-right-20 md:h-56 md:w-56 lg:h-72 lg:w-50
-             lg:bottom-10 lg:-right-10"
+             lg:bottom-10 lg:-right-10 animate-pulse"
           style={{ filter: "blur(200px)" }}
         ></div>
         <div
@@ -35,12 +41,14 @@ const MainPage = () => {
             <span className="text-4xl md:text-5xl lg:text-6xl font-medium inline-block mb-6 text-white mt-7">
               Hey, I'am{" "}
             </span>
-            <h1 className="text-orange-400 text-5xl md:text-6xl lg:text-7xl font-bold mb-8">
-              Devashish kunwar
+            <h1 className="text-orange-400 text-5xl md:text-6xl lg:text-5xl font-bold mb-8">
+              {/* Devashish kunwar */}
+              {text}
+              <span className="animate-blink text-white">|</span>
             </h1>
-            <p className="text-2xl md:text-3xl lg:text-4xl font-medium mb-5 text-white">
+            {/* <p className="text-2xl md:text-3xl lg:text-4xl font-medium mb-5 text-white">
               A web developer{" "}
-            </p>
+            </p> */}
           </div>
           <div className="flex items-center mt-10 gap-10 justify-center">
             <a

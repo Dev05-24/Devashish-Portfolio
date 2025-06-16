@@ -1,3 +1,36 @@
+import { useEffect } from "react";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+
+const SkillCard = ({ title, img }) => {
+  const controls = useAnimation();
+  const [ref, inView] = useInView({ threshold: 0.2 });
+
+  useEffect(() => {
+    if (inView) controls.start("visible");
+  }, [inView, controls]);
+
+  return (
+    <motion.div
+      ref={ref}
+      initial="hidden"
+      animate={controls}
+      variants={{
+        visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+        hidden: { opacity: 0, y: 50 },
+      }}
+      className="flex flex-col py-3 items-center rounded-xl w-full justify-center"
+    >
+      <img
+        className="h-16 object-cover hover:scale-125 duration-300 ease-in-out hover:animate-bounce cursor-pointer"
+        src={img}
+        alt={title}
+      />
+      <h2 className="text-xl font-bold text-white">{title}</h2>
+    </motion.div>
+  );
+};
+
 const Skills = () => {
   const cardsData = [
     { id: 1, title: "Html", img: "./images/skills/html.png" },
@@ -33,24 +66,26 @@ const Skills = () => {
             style={{ filter: "blur(200px)" }}
           ></div>
         
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 p-3 gap-10 relative overflow-hidden bg-red-40 place-items-center place-content-center">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 p-3 relative gap-7 overflow-hidden bg-red-40 place-items-center place-content-center lg:max-w-[50%] lg:mx-auto">
           
-          {cardsData.map((card) => (
+          {/* {cardsData.map((card) => (
             <div
-              // className="rounded-lg flex cursor-pointer bg-green-300 overflow-hidden hover:scale-105 hover:bg-gray-50 shadow-[0px_0px_15px_rgba(255,255,255,0.7)] hover:text-black font-bold
-              //  backdrop-blur-sm transform transition-all duration-500 hover:shadow-[0_0_25px_rgba(255,255,255,0.1)] border border-white/10"
-              className=" flex lg:flex-col px-3 py-3 items-center rounded-xl w-full justify-center gap-3"
+              className="flex flex-col py-3 items-center rounded-xl w-full justify-center"
             >
               <img
-                className="h-12 object-cover hover:scale-125 duration-300 ease-in-out hover:animate-bounce cursor-pointer"
+                className="h-16 object-cover hover:scale-125 duration-300 ease-in-out hover:animate-bounce cursor-pointer"
                 src={card.img}
                 alt={card.title}
               />
               <div className="">
-                <h2 className="text-xl font-bold">{card.title}</h2>
+                <h2 className="text-xl font-bold text-white">{card.title}</h2>
               </div>
             </div>
-          ))}
+          ))} */}
+          {cardsData.map((card) => (
+  <SkillCard key={card.id} title={card.title} img={card.img} />
+))}
+
         </div>
         </div>
       </div>
