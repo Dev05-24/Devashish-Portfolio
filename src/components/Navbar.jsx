@@ -51,8 +51,7 @@ const Header = () => {
               href="/Devashish-Kunwar_Resume.pdf"
               download="Devashish_Kunwar-resume.pdf"
             >
-              <button className="bg-orange-600 border border-orange-400 text-orange-100 px-3 py-2 rounded-lg font-bold cursor-pointer transition-transform transform duration-300 
-              hover:scale-110 hover:bg-white/10 hover:text-orange-400">
+              <button className="border border-teal-400 text-teal-100 px-3 py-2 rounded-lg font-bold cursor-pointer transition transform ease-in-out duration-300 hover:bg-white/10 hover:text-teal-400">
                 Resume
               </button>
             </a>
@@ -84,7 +83,7 @@ const Header = () => {
                       aria-current="page"
                     >
                       {item.name}
-                  <span className="left-0 -bottom-1 bg-orange-400 h-[2px] w-0 absolute opacity-70 transition-all duration-300 group-hover:w-full"></span>
+                  <span className="left-0 -bottom-1 bg-teal-400 h-[2px] w-0 absolute opacity-70 transition-all duration-300 group-hover:w-full "></span>
                     </a>
                   </li>
                   </>

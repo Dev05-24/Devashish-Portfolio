@@ -2,23 +2,36 @@ import { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
-const SkillCard = ({ title, img }) => {
+const SkillCard = ({ title, img, direction = "left"}) => {
   const controls = useAnimation();
-  const [ref, inView] = useInView({ threshold: 0.2 });
+  const [ref, inView] = useInView({ threshold: 0.2, triggerOnce: false });
 
   useEffect(() => {
-    if (inView) controls.start("visible");
+    if (inView){
+      controls.start("visible");
+    } else{
+      controls.start("hidden");
+    }
   }, [inView, controls]);
+
+  const variants = {
+    visible : {
+      opacity: 1,
+      x: 0,
+      transition: {duration: 0.5, ease: "easeOut"}
+    },
+    hidden: {
+      opacity: 0,
+      x: direction === "left" ? -100 : 100, 
+    },
+  };
 
   return (
     <motion.div
       ref={ref}
       initial="hidden"
       animate={controls}
-      variants={{
-        visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-        hidden: { opacity: 0, y: 50 },
-      }}
+      variants={variants}
       className="flex flex-col py-3 items-center rounded-xl w-full justify-center"
     >
       <img
@@ -52,38 +65,23 @@ const Skills = () => {
         id="skills"
       >
         <div className="relative overflow-hidden px-10">
-          <h1 className="text-4xl lg:text-5xl text-orange-400 font-extrabold my-8 text-center transform transition-all duration-500 hover:scale-105">
+          <h1 className="text-4xl lg:text-5xl text-teal-400 font-extrabold my-8 text-center transform transition-all duration-500 hover:scale-105">
           Skills
         </h1>
             <div
-              className="absolute rounded-full bg-orange-400 h-64 w-48 -top-10 -left-45 md:h-72 md:w-[22rem] md:-top-40 md:-left-70 lg:h-[15rem] lg:w-[32rem] lg:-top-40 lg:-left-120
+              className="absolute rounded-full bg-teal-400 h-64 w-48 -top-10 -left-45 md:h-72 md:w-[22rem] md:-top-40 md:-left-70 lg:h-[15rem] lg:w-[32rem] lg:-top-40 lg:-left-120
                       xl:h-[19rem] xl:w-[34rem] xl:-top-30 xl:-left-100 backdrop-blur-3xl"
             style={{ filter: "blur(200px)" }}
           ></div>
           <div
-            className="absolute rounded-full bg-orange-400 h-40 w-48 -top-30 -right-40 md:h-72 md:w-[22rem] md:-top-40 md:-right-70 lg:h-[15rem] lg:w-[32rem] lg:-top-40 lg:-right-120
+            className="absolute rounded-full bg-teal-400 h-40 w-48 -top-30 -right-40 md:h-72 md:w-[22rem] md:-top-40 md:-right-70 lg:h-[15rem] lg:w-[32rem] lg:-top-40 lg:-right-120
                       xl:h-[19rem] xl:w-[34rem] xl:-top-70 xl:-right-90 backdrop-blur-3xl"
             style={{ filter: "blur(200px)" }}
           ></div>
         
-        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 p-3 relative gap-7 overflow-hidden bg-red-40 place-items-center place-content-center lg:max-w-[50%] lg:mx-auto">
-          
-          {/* {cardsData.map((card) => (
-            <div
-              className="flex flex-col py-3 items-center rounded-xl w-full justify-center"
-            >
-              <img
-                className="h-16 object-cover hover:scale-125 duration-300 ease-in-out hover:animate-bounce cursor-pointer"
-                src={card.img}
-                alt={card.title}
-              />
-              <div className="">
-                <h2 className="text-xl font-bold text-white">{card.title}</h2>
-              </div>
-            </div>
-          ))} */}
-          {cardsData.map((card) => (
-  <SkillCard key={card.id} title={card.title} img={card.img} />
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 p-3 relative gap-5 bg-red-40 place-items-center place-content-center max-w-screen-xl mx-auto">
+          {cardsData.map((card, index) => (
+  <SkillCard key={card.id} title={card.title} img={card.img} direction={index % 2 === 0 ? "left" : "right"}/>
 ))}
 
         </div>

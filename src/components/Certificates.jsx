@@ -1,3 +1,4 @@
+import { useRef, useEffect } from "react";
 import CertificateCard from "./CertificateCard";
 const certificates = [
   {
@@ -26,18 +27,52 @@ const certificates = [
   },
 ];
 const Certificates = () => {
+  const contentRef = useRef(null);
+      const headingRef = useRef(null);
+    
+      useEffect(() =>{
+        const animateElement = (ref) =>{
+        const observer = new IntersectionObserver(
+          ([entry]) => {
+            const el = ref.current;
+            if(!el) return;
+    
+            if(entry.isIntersecting){
+              el.classList.add("scale-100","opacity-100","translate-y-0");
+              el.classList.remove("scale-75","opacity-0","translate-y-5");
+            }else{
+               el.classList.add("scale-75","opacity-0","translate-y-5");
+              el.classList.remove("scale-100","opacity-100","translate-y-0");
+            }
+          },
+          {threshold : 0.4}
+        );
+        if(ref.current) observer.observe(ref.current);
+    
+        return () =>{
+          if(ref.current) observer.unobserve(ref.current);
+        };
+      };
+      const cleanup1 = animateElement(headingRef);
+      const cleanup2 = animateElement(contentRef);
+    
+      return () =>{
+        cleanup1?.();
+        cleanup2?.();
+      }
+      },[]);
   return (
     <>
       <section className="py-20 mx-10" id="certificates">
         
       <div className="container mx-auto px-4 relative overflow-hidden py-3 lg:py-0">
         <div className="mb-16 text-center ">
-          <h2 className="m-4 text-4xl font-bold text-orange-400 sm:text-5xl">
+          <h2 ref={headingRef} className="m-4 text-4xl font-extrabold text-teal-400 sm:text-5xl transform transition duration-700 ease-in-out scale-75 opacity-0 translate-y-5">
             Certifications
           </h2>
           <div
         className="
-    absolute rounded-full bg-orange-400
+    absolute rounded-full bg-teal-400
     h-64 w-48 
     -top-10 -left-45
     md:h-72 md:w-[22rem] md:-top-40 md:-left-70
@@ -49,7 +84,7 @@ const Certificates = () => {
       ></div>
       <div
         className="
-    absolute rounded-full bg-orange-400
+    absolute rounded-full bg-teal-400
     h-40 w-48 
     -top-30 -right-40
     md:h-72 md:w-[22rem] md:-top-40 md:-right-70
@@ -59,20 +94,19 @@ const Certificates = () => {
   "
         style={{ filter: "blur(200px)" }}
       ></div>
-          <p className="mx-auto max-w-2xl text-sm text-white">
+          <p className="mx-auto max-w-3xl text-lg text-white font-semibold">
             A collection of certifications that demonstrate my
             commitment to continuous learning and skill development in various
             areas of technology and design.
           </p>
         </div>
-        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+        <div ref={contentRef} className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4 relative overflow-hidden transform transition duration-700 ease-in-out scale-75 opacity-0 translate-y-5">
           {certificates.map((cert, index) => (
             <CertificateCard key={index} {...cert} />
           ))}
         </div>
       </div>
     </section>
-      {/* <div className="w-full h-0.5 bg-white shadow-[0px_0px_10px_3px_rgba(255,255,255,0.7)]"></div> */}
     </>
   );
 };

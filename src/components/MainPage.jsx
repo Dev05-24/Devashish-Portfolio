@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import useTypewriter from "../hooks/useTypeWriter";
-// import { Download } from "lucide-react";
 
 const MainPage = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -20,12 +19,12 @@ const MainPage = () => {
         id="home"
       >
         <div
-          className="bg-orange-400 absolute rounded-full h-56 w-72 sm:w-96 md:w-120
+          className="bg-teal-400 absolute rounded-full h-56 w-72 sm:w-96 md:w-120
           lg:w-120 xl:w-120 top-0 left-0 sm:-top-10 sm:-left-10 md:-top-20 md:-left-20 lg:-top-30 lg:-left-30  backdrop-blur-3xl animate-pulse"
           style={{ filter: "blur(150px)" }}
         ></div>
         <div
-          className="bg-orange-400 absolute rounded-full backdrop-blur-3xl
+          className="bg-teal-400 absolute rounded-full backdrop-blur-3xl
              h-0 w-0 sm:h-52 sm:w-44 sm:bottom-50 sm:-right-20 md:h-56 md:w-56 lg:h-72 lg:w-50
              lg:bottom-10 lg:-right-10 animate-pulse"
           style={{ filter: "blur(200px)" }}
@@ -38,30 +37,27 @@ const MainPage = () => {
           }`}
         >
           <div className="text-center">
-            <span className="text-4xl md:text-5xl lg:text-6xl font-medium inline-block mb-6 text-white mt-7">
+            <span className="text-4xl md:text-5xl lg:text-6xl font-extrabold inline-block mb-6 text-white mt-7">
               Hey, I'am{" "}
             </span>
-            <h1 className="text-orange-400 text-5xl md:text-6xl lg:text-5xl font-bold mb-8">
-              {/* Devashish kunwar */}
+            <h1 className="text-teal-400 text-5xl md:text-6xl lg:text-5xl font-bold mb-8">
               {text}
               <span className="animate-blink text-white">|</span>
             </h1>
-            {/* <p className="text-2xl md:text-3xl lg:text-4xl font-medium mb-5 text-white">
-              A web developer{" "}
-            </p> */}
+            
           </div>
-          <div className="flex items-center mt-10 gap-10 justify-center">
+          <div className="flex items-center mt-12 gap-11 justify-center">
             <a
               href="https://www.linkedin.com/in/devashish-kunwar-533895177"
               target="_blank"
             >
-              <i className="fa-brands animate-bounce fa-linkedin text-3xl transition-transform transform duration-300 hover:scale-125 text-blue-500"></i>
+              <i className="fa-brands animate-bounce fa-linkedin text-4xl transition-transform transform duration-300 hover:scale-125 text-blue-400"></i>
             </a>
             <a href="https://github.com/Dev05-24" target="_blank">
-              <i className="fa-brands text-blue-50 fa-github text-3xl animate-bounce transition-transform duration-300 transform hover:scale-125"></i>
+              <i className="fa-brands text-blue-50 fa-github text-4xl animate-bounce transition-transform duration-300 transform hover:scale-125"></i>
             </a>
             <a href="https://leetcode.com/u/DEV0902/" target="_blank">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" className="w-8 h-8 fill-current text-orange-500 duration-300 text-3xl animate-bounce transition-transform transform hover:scale-125">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" className="w-8 h-8 fill-current duration-300 text-4xl animate-bounce transition-transform transform hover:scale-125">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="leetcode">
                   <path fill="#B3B1B0" d="M22 14.355c0-.742-.564-1.346-1.26-1.346H10.676c-.696 0-1.26.604-1.26 1.346s.563 1.346 1.26 1.346H20.74c.696.001 1.26-.603 1.26-1.346z"></path>
                   <path fill="#E7A41F" d="m3.482 18.187 4.313 4.361c.973.979 2.318 1.452 3.803 1.452 1.485 0 2.83-.512 3.805-1.494l2.588-2.637c.51-.514.492-1.365-.039-1.9-.531-.535-1.375-.553-1.884-.039l-2.676 2.607c-.462.467-1.102.662-1.809.662s-1.346-.195-1.81-.662l-4.298-4.363c-.463-.467-.696-1.15-.696-1.863 0-.713.233-1.357.696-1.824l4.285-4.38c.463-.467 1.116-.645 1.822-.645s1.346.195 1.809.662l2.676 2.606c.51.515 1.354.497 1.885-.038.531-.536.549-1.387.039-1.901l-2.588-2.636a4.994 4.994 0 0 0-2.392-1.33l-.034-.007 2.447-2.503c.512-.514.494-1.366-.037-1.901-.531-.535-1.376-.552-1.887-.038l-10.018 10.1C2.509 11.458 2 12.813 2 14.311c0 1.498.509 2.896 1.482 3.876z"></path>
@@ -71,12 +67,7 @@ const MainPage = () => {
             </a>
           </div>
         </div>
-        {/* <div className={`image lg:w-1/4 text-center justify-center hidden sm:block transition-all ease-in-out duration-500 transform ${isVisible ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"}`}>
-          <img src="./images/img.png" alt="Devashish Kunwar" 
-          className={`rounded-full h-100 w-90 transition-all duration-700 delay-200 transform ${isVisible ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"}`} />
-        </div> */}
       </div>
-        {/* <div className="w-full h-0.5 bg-white shadow-[0px_0px_10px_3px_rgba(255,255,255,0.7)]"></div> */}
     </>
   );
 };

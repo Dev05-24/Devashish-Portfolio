@@ -5,7 +5,7 @@ html{
 }
 body{
     background: black;
-    color : orange;
+    color : teal;
 }
 }
 @layer utilities {
@@ -15,23 +15,6 @@ body{
     }
   
     .scroll-thin::-webkit-scrollbar-thumb {
-      /* background-color: rgba(0, 0, 0, 0.4); */
       border-radius: 10px;
     }
-  
-    .scroll-thin::-webkit-scrollbar-track {
-      /* background-color: transparent; */
-    }
   }
-
-  /* @keyframes blink {
-  0%, 100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-}
-.animate-blink {
-  animation: blink 3s step-start infinite;
-} */
